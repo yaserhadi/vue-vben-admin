@@ -1,0 +1,109 @@
+{
+  "formRules": {
+    "required": "يرجى إدخال {0}",
+    "selectRequired": "يرجى اختيار {0}",
+    "minLength": "{0} يجب أن لا يقل عن {1} أحرف",
+    "maxLength": "{0} يجب أن لا يزيد عن {1} أحرف",
+    "length": "{0} يجب أن يكون بطول {1} حرفًا",
+    "alreadyExists": "{0} `{1}` موجود بالفعل",
+    "startWith": "{0} يجب أن يبدأ بـ `{1}`",
+    "invalidURL": "يرجى إدخال رابط صحيح"
+  },
+  "actionTitle": {
+    "edit": "تعديل {0}",
+    "create": "إنشاء {0}",
+    "delete": "حذف {0}",
+    "view": "عرض {0}"
+  },
+  "actionMessage": {
+    "deleteConfirm": "هل أنت متأكد من حذف {0}؟",
+    "deleting": "جارٍ حذف {0}...",
+    "deleteSuccess": "تم حذف {0} بنجاح",
+    "operationSuccess": "تمت العملية بنجاح",
+    "operationFailed": "فشلت العملية"
+  },
+  "placeholder": {
+    "input": "يرجى الإدخال",
+    "select": "يرجى الاختيار"
+  },
+  "captcha": {
+    "title": "يرجى إكمال التحقق الأمني",
+    "sliderSuccessText": "تم الاجتياز",
+    "sliderDefaultText": "اسحب الشريط",
+    "alt": "يدعم قيمة خاصية src لوسم img",
+    "sliderRotateDefaultTip": "انقر لتحديث الصورة",
+    "sliderTranslateDefaultTip": "انقر لتحديث الصورة",
+    "sliderRotateFailTip": "فشل التحقق",
+    "sliderRotateSuccessTip": "تم التحقق بنجاح خلال {0} ثانية",
+    "sliderTranslateFailTip": "فشل التحقق",
+    "sliderTranslateSuccessTip": "تم التحقق بنجاح خلال {0} ثانية",
+    "refreshAriaLabel": "تحديث الكابتشا",
+    "confirmAriaLabel": "تأكيد الاختيار",
+    "confirm": "تأكيد",
+    "pointAriaLabel": "نقطة النقر",
+    "clickInOrder": "يرجى النقر بالترتيب"
+  },
+  "iconPicker": {
+    "placeholder": "اختر أيقونة",
+    "search": "ابحث عن أيقونة..."
+  },
+  "jsonViewer": {
+    "copy": "نسخ",
+    "copied": "تم النسخ"
+  },
+  "fallback": {
+    "pageNotFound": "عذرًا! الصفحة غير موجودة",
+    "pageNotFoundDesc": "نأسف، لم نتمكن من العثور على الصفحة المطلوبة.",
+    "forbidden": "عذرًا! تم رفض الوصول",
+    "forbiddenDesc": "نأسف، ليس لديك إذن للوصول إلى هذه الصفحة.",
+    "internalError": "عذرًا! حدث خطأ ما",
+    "internalErrorDesc": "نأسف، حدث خطأ في الخادم.",
+    "offline": "بدون اتصال",
+    "offlineError": "عذرًا! خطأ في الشبكة",
+    "offlineErrorDesc": "لا يمكن الاتصال بالإنترنت. تحقق من الاتصال.",
+    "comingSoon": "قريبًا",
+    "http": {
+      "requestTimeout": "انتهت مهلة الطلب. يرجى المحاولة لاحقًا.",
+      "networkError": "حدث خطأ في الشبكة. يرجى التحقق من الاتصال والمحاولة مرة أخرى.",
+      "badRequest": "طلب غير صالح. يرجى التحقق من الإدخال والمحاولة مرة أخرى.",
+      "unauthorized": "غير مصرح. يرجى تسجيل الدخول للمتابعة.",
+      "forbidden": "ممنوع. لا تملك إذنًا للوصول إلى هذا المورد.",
+      "notFound": "غير موجود. المورد المطلوب غير موجود.",
+      "internalServerError": "خطأ داخلي في الخادم. يرجى المحاولة لاحقًا."
+    }
+  },
+  "widgets": {
+    "document": "الوثائق",
+    "qa": "الأسئلة الشائعة",
+    "setting": "الإعدادات",
+    "logoutTip": "هل تريد تسجيل الخروج؟",
+    "viewAll": "عرض كل الرسائل",
+    "notifications": "الإشعارات",
+    "markAllAsRead": "تحديد الكل كمقروء",
+    "clearNotifications": "مسح",
+    "checkUpdatesTitle": "تحديث جديد متاح",
+    "checkUpdatesDescription": "انقر للتحديث للحصول على أحدث نسخة",
+    "search": {
+      "title": "بحث",
+      "searchNavigate": "بحث عن تنقل",
+      "select": "اختيار",
+      "navigate": "انتقال",
+      "close": "إغلاق",
+      "noResults": "لا توجد نتائج",
+      "noRecent": "لا يوجد سجل بحث",
+      "recent": "سجل البحث"
+    },
+    "lockScreen": {
+      "title": "قفل الشاشة",
+      "screenButton": "قيد القفل",
+      "password": "كلمة المرور",
+      "placeholder": "يرجى إدخال كلمة المرور",
+      "unlock": "انقر لفتح القفل",
+      "errorPasswordTip": "كلمة المرور غير صحيحة، يرجى إعادة الإدخال",
+      "backToLogin": "العودة لتسجيل الدخول",
+      "entry": "دخول النظام"
+    }
+  }
+}
+
+

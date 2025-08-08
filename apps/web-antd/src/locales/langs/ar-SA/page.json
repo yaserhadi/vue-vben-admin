@@ -1,0 +1,16 @@
+{
+  "auth": {
+    "login": "تسجيل الدخول",
+    "register": "تسجيل",
+    "codeLogin": "تسجيل برمز",
+    "qrcodeLogin": "تسجيل برمز QR",
+    "forgetPassword": "نسيت كلمة المرور"
+  },
+  "dashboard": {
+    "title": "لوحة التحكم",
+    "analytics": "التحليلات",
+    "workspace": "مساحة العمل"
+  }
+}
+
+

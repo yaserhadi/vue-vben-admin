@@ -10,7 +10,7 @@ import { antdLocale } from '#/locales';
 
 defineOptions({ name: 'App' });
 
-const { isDark } = usePreferences();
+const { isDark, locale } = usePreferences();
 const { tokens } = useAntdDesignTokens();
 
 const tokenTheme = computed(() => {
@@ -28,10 +28,14 @@ const tokenTheme = computed(() => {
     token: tokens,
   };
 });
+
+const direction = computed(() =>
+  String(locale.value).startsWith('ar') ? 'rtl' : 'ltr',
+);
 </script>
 
 <template>
-  <ConfigProvider :locale="antdLocale" :theme="tokenTheme">
+  <ConfigProvider :locale="antdLocale" :theme="tokenTheme" :direction="direction">
     <App>
       <RouterView />
     </App>

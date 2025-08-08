@@ -111,14 +111,21 @@ export function setupVbenVxeTable(setupOptions: SetupVxeTable) {
   const localMap = {
     'zh-CN': zhCN,
     'en-US': enUS,
+    // Arabic fallback to English until official locale is available
+    'ar-SA': enUS,
   };
 
   watch(
     [() => isDark.value, () => locale.value],
     ([isDarkValue, localeValue]) => {
       VxeUI.setTheme(isDarkValue ? 'dark' : 'light');
-      VxeUI.setI18n(localeValue, localMap[localeValue]);
-      VxeUI.setLanguage(localeValue);
+      const lang = (['zh-CN', 'en-US'] as const).includes(
+        localeValue as any,
+      )
+        ? (localeValue as 'zh-CN' | 'en-US')
+        : 'en-US';
+      VxeUI.setI18n(lang, localMap[lang]);
+      VxeUI.setLanguage(lang);
     },
     {
       immediate: true,

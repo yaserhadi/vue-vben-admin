@@ -1,0 +1,26 @@
+{
+  "back": "عودة",
+  "backToHome": "العودة إلى الصفحة الرئيسية",
+  "login": "تسجيل الدخول",
+  "logout": "تسجيل الخروج",
+  "prompt": "تنبيه",
+  "cancel": "إلغاء",
+  "confirm": "تأكيد",
+  "reset": "إعادة تعيين",
+  "noData": "لا توجد بيانات",
+  "refresh": "تحديث",
+  "loadingMenu": "جاري تحميل القائمة",
+  "query": "بحث",
+  "search": "بحث",
+  "enabled": "مفعل",
+  "disabled": "غير مفعل",
+  "edit": "تعديل",
+  "delete": "حذف",
+  "create": "إنشاء",
+  "yes": "نعم",
+  "no": "لا",
+  "showSearchPanel": "إظهار لوحة البحث",
+  "hideSearchPanel": "إخفاء لوحة البحث"
+}
+
+

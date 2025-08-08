@@ -97,6 +97,8 @@ function setI18nLanguage(locale: Locale) {
   i18n.global.locale.value = locale;
 
   document?.querySelector('html')?.setAttribute('lang', locale);
+  const isRtl = /^ar(-|$)/i.test(String(locale));
+  document?.querySelector('html')?.setAttribute('dir', isRtl ? 'rtl' : 'ltr');
 }
 
 async function setupI18n(app: App, options: LocaleSetupOptions = {}) {
@@ -124,7 +126,11 @@ async function loadLocaleMessages(lang: SupportedLanguagesType) {
   if (unref(i18n.global.locale) === lang) {
     return setI18nLanguage(lang);
   }
-  setSimpleLocale(lang);
+  // set simple locale only for locales it supports; otherwise fallback to en-US
+  const simpleLocale = (['en-US', 'zh-CN'] as const).includes(lang as any)
+    ? (lang as 'en-US' | 'zh-CN')
+    : 'en-US';
+  setSimpleLocale(simpleLocale);
 
   const message = await localesMap[lang]?.();
 
