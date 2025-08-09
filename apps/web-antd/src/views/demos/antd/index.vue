@@ -1,32 +1,33 @@
 <script lang="ts" setup>
 import { Page } from '@vben/common-ui';
+import { $t } from '@vben/locales';
 
 import { Button, Card, message, notification, Space } from 'ant-design-vue';
 
 type NotificationType = 'error' | 'info' | 'success' | 'warning';
 
 function info() {
-  message.info('How many roads must a man walk down');
+  message.info($t('page.demos.antd.message.infoText'));
 }
 
 function error() {
   message.error({
-    content: 'Once upon a time you dressed so fine',
+    content: $t('page.demos.antd.message.errorText'),
     duration: 2500,
   });
 }
 
 function warning() {
-  message.warning('How many roads must a man walk down');
+  message.warning($t('page.demos.antd.message.warningText'));
 }
 function success() {
-  message.success('Cause you walked hand in hand With another man in my place');
+  message.success($t('page.demos.antd.message.successText'));
 }
 
 function notify(type: NotificationType) {
   notification[type]({
     duration: 2500,
-    message: '说点啥呢',
+    message: $t('page.demos.antd.notification.message'),
     type,
   });
 }
@@ -34,32 +35,32 @@ function notify(type: NotificationType) {
 
 <template>
   <Page
-    description="支持多语言，主题功能集成切换等"
-    title="Ant Design Vue组件使用演示"
+    :description="$t('page.demos.antd.description')"
+    :title="$t('page.demos.antd.title')"
   >
-    <Card class="mb-5" title="按钮">
+    <Card class="mb-5" :title="$t('page.demos.antd.buttons.title')">
       <Space>
-        <Button>Default</Button>
-        <Button type="primary"> Primary </Button>
-        <Button> Info </Button>
-        <Button danger> Error </Button>
+        <Button>{{ $t('page.demos.antd.buttons.default') }}</Button>
+        <Button type="primary">{{ $t('page.demos.antd.buttons.primary') }}</Button>
+        <Button>{{ $t('page.demos.antd.buttons.info') }}</Button>
+        <Button danger>{{ $t('page.demos.antd.buttons.error') }}</Button>
       </Space>
     </Card>
-    <Card class="mb-5" title="Message">
+    <Card class="mb-5" :title="$t('page.demos.antd.message.title')">
       <Space>
-        <Button @click="info"> 信息 </Button>
-        <Button danger @click="error"> 错误 </Button>
-        <Button @click="warning"> 警告 </Button>
-        <Button @click="success"> 成功 </Button>
+        <Button @click="info">{{ $t('page.demos.antd.message.info') }}</Button>
+        <Button danger @click="error">{{ $t('page.demos.antd.message.error') }}</Button>
+        <Button @click="warning">{{ $t('page.demos.antd.message.warning') }}</Button>
+        <Button @click="success">{{ $t('page.demos.antd.message.success') }}</Button>
       </Space>
     </Card>
 
-    <Card class="mb-5" title="Notification">
+    <Card class="mb-5" :title="$t('page.demos.antd.notification.title')">
       <Space>
-        <Button @click="notify('info')"> 信息 </Button>
-        <Button danger @click="notify('error')"> 错误 </Button>
-        <Button @click="notify('warning')"> 警告 </Button>
-        <Button @click="notify('success')"> 成功 </Button>
+        <Button @click="notify('info')">{{ $t('page.demos.antd.notification.info') }}</Button>
+        <Button danger @click="notify('error')">{{ $t('page.demos.antd.notification.error') }}</Button>
+        <Button @click="notify('warning')">{{ $t('page.demos.antd.notification.warning') }}</Button>
+        <Button @click="notify('success')">{{ $t('page.demos.antd.notification.success') }}</Button>
       </Space>
     </Card>
   </Page>

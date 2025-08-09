@@ -10,5 +10,37 @@
     "title": "概览",
     "analytics": "分析页",
     "workspace": "工作台"
+  },
+  "demos": {
+    "antd": {
+      "title": "Ant Design Vue组件使用演示",
+      "description": "支持多语言，主题功能集成切换等",
+      "buttons": {
+        "title": "按钮",
+        "default": "Default",
+        "primary": "Primary",
+        "info": "Info",
+        "error": "Error"
+      },
+      "message": {
+        "title": "Message",
+        "info": "信息",
+        "error": "错误",
+        "warning": "警告",
+        "success": "成功",
+        "infoText": "How many roads must a man walk down",
+        "errorText": "Once upon a time you dressed so fine",
+        "warningText": "How many roads must a man walk down",
+        "successText": "Cause you walked hand in hand With another man in my place"
+      },
+      "notification": {
+        "title": "Notification",
+        "info": "信息",
+        "error": "错误",
+        "warning": "警告",
+        "success": "成功",
+        "message": "说点啥呢"
+      }
+    }
   }
 }

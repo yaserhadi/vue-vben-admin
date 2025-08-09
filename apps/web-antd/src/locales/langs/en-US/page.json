@@ -10,5 +10,37 @@
     "title": "Dashboard",
     "analytics": "Analytics",
     "workspace": "Workspace"
+  },
+  "demos": {
+    "antd": {
+      "title": "Ant Design Vue Component Usage Demo",
+      "description": "Supports multi-language, integrated theme switching features, etc.",
+      "buttons": {
+        "title": "Buttons",
+        "default": "Default",
+        "primary": "Primary",
+        "info": "Info",
+        "error": "Error"
+      },
+      "message": {
+        "title": "Message",
+        "info": "Info",
+        "error": "Error",
+        "warning": "Warning",
+        "success": "Success",
+        "infoText": "How many roads must a man walk down",
+        "errorText": "Once upon a time you dressed so fine",
+        "warningText": "How many roads must a man walk down",
+        "successText": "Cause you walked hand in hand With another man in my place"
+      },
+      "notification": {
+        "title": "Notification",
+        "info": "Info",
+        "error": "Error",
+        "warning": "Warning",
+        "success": "Success",
+        "message": "What to say"
+      }
+    }
   }
 }
