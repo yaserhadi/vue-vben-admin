@@ -8,6 +8,7 @@ import {
   VBEN_GITHUB_URL,
   VBEN_PREVIEW_URL,
 } from '@vben/constants';
+import { $t } from '@vben/locales';
 
 import { VbenRenderContent } from '@vben-core/shadcn-ui';
 
@@ -20,10 +21,9 @@ defineOptions({
 });
 
 withDefaults(defineProps<Props>(), {
-  description:
-    '是一个现代化开箱即用的中后台解决方案，采用最新的技术栈，包括 Vue 3.0、Vite、TailwindCSS 和 TypeScript 等前沿技术，代码规范严谨，提供丰富的配置选项，旨在为中大型项目的开发提供现成的开箱即用解决方案及丰富的示例，同时，它也是学习和深入前端技术的一个极佳示例。',
+  description: $t('about.description'),
   name: 'Vben Admin',
-  title: '关于项目',
+  title: $t('about.title'),
 });
 
 declare global {
@@ -65,38 +65,38 @@ const {
 const vbenDescriptionItems: DescriptionItem[] = [
   {
     content: version,
-    title: '版本号',
+    title: $t('about.fields.version'),
   },
   {
     content: license,
-    title: '开源许可协议',
+    title: $t('about.fields.license'),
   },
   {
     content: buildTime,
-    title: '最后构建时间',
+    title: $t('about.fields.buildTime'),
   },
   {
-    content: renderLink(homepage, '点击查看'),
-    title: '主页',
+    content: renderLink(homepage, $t('about.actions.clickToView')),
+    title: $t('about.fields.homepage'),
   },
   {
-    content: renderLink(VBEN_DOC_URL, '点击查看'),
-    title: '文档地址',
+    content: renderLink(VBEN_DOC_URL, $t('about.actions.clickToView')),
+    title: $t('about.fields.docUrl'),
   },
   {
-    content: renderLink(VBEN_PREVIEW_URL, '点击查看'),
-    title: '预览地址',
+    content: renderLink(VBEN_PREVIEW_URL, $t('about.actions.clickToView')),
+    title: $t('about.fields.previewUrl'),
   },
   {
-    content: renderLink(VBEN_GITHUB_URL, '点击查看'),
-    title: 'Github',
+    content: renderLink(VBEN_GITHUB_URL, $t('about.actions.clickToView')),
+    title: $t('about.fields.github'),
   },
   {
     content: h('div', [
       renderLink(authorUrl, `${authorName}  `),
       renderLink(`mailto:${authorEmail}`, authorEmail),
     ]),
-    title: '作者',
+    title: $t('about.fields.author'),
   },
 ];
 
@@ -123,7 +123,7 @@ const devDependenciesItems = Object.keys(devDependencies).map((key) => ({
     </template>
     <div class="card-box p-5">
       <div>
-        <h5 class="text-foreground text-lg">基本信息</h5>
+        <h5 class="text-foreground text-lg">{{ $t('about.sections.basicInfo') }}</h5>
       </div>
       <div class="mt-4">
         <dl class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -143,7 +143,7 @@ const devDependenciesItems = Object.keys(devDependencies).map((key) => ({
 
     <div class="card-box mt-6 p-5">
       <div>
-        <h5 class="text-foreground text-lg">生产环境依赖</h5>
+        <h5 class="text-foreground text-lg">{{ $t('about.sections.prodDependencies') }}</h5>
       </div>
       <div class="mt-4">
         <dl class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -162,7 +162,7 @@ const devDependenciesItems = Object.keys(devDependencies).map((key) => ({
     </div>
     <div class="card-box mt-6 p-5">
       <div>
-        <h5 class="text-foreground text-lg">开发环境依赖</h5>
+        <h5 class="text-foreground text-lg">{{ $t('about.sections.devDependencies') }}</h5>
       </div>
       <div class="mt-4">
         <dl class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
