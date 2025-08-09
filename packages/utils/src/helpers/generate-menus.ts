@@ -80,11 +80,38 @@ function generateMenus(
     };
   });
 
+  const dir = typeof document === 'undefined' ? '' : document.dir;
+  const locale =
+    typeof navigator === 'undefined' ? '' : navigator.language.toLowerCase();
+  const isArabic = dir === 'rtl' || locale.startsWith('ar');
+  const collator = isArabic ? new Intl.Collator('ar') : undefined;
+
   // 对菜单进行排序，避免order=0时被替换成999的问题
-  menus = menus.sort((a, b) => (a?.order ?? 999) - (b?.order ?? 999));
+  menus = sortMenus(menus, collator);
 
   // 过滤掉隐藏的菜单项
   return filterTree(menus, (menu) => !!menu.show);
+}
+
+function sortMenus(
+  list: MenuRecordRaw[],
+  collator?: Intl.Collator,
+): MenuRecordRaw[] {
+  const sorted = list.sort((a, b) => {
+    const diff = (a?.order ?? 999) - (b?.order ?? 999);
+    if (diff === 0) {
+      return collator ? collator.compare(a.name, b.name) : 0;
+    }
+    return diff;
+  });
+
+  sorted.forEach((menu) => {
+    if (menu.children?.length) {
+      menu.children = sortMenus(menu.children, collator);
+    }
+  });
+
+  return sorted;
 }
 
 export { generateMenus };
