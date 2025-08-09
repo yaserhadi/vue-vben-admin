@@ -144,6 +144,7 @@ export const useTabbarStore = defineStore('core-tabbar', {
           );
           index !== -1 && this.tabs.splice(index, 1);
         }
+        // Always append - ordering is handled in getTabs()
         this.tabs.push(tab);
       } else {
         // 页面已经存在，不重复添加选项卡，只更新选项卡参数
@@ -521,7 +522,16 @@ export const useTabbarStore = defineStore('core-tabbar', {
     },
     getTabs(): TabDefinition[] {
       const normalTabs = this.tabs.filter((tab) => !isAffixTab(tab));
-      return [...this.affixTabs, ...normalTabs].filter(Boolean);
+      const isRtl = document.documentElement?.getAttribute('dir') === 'rtl';
+      
+      if (isRtl) {
+        // In RTL: normal tabs first (leftmost, newest first), then affix tabs (rightmost)
+        const reversedNormalTabs = [...normalTabs].reverse();
+        return [...reversedNormalTabs, ...this.affixTabs].filter(Boolean);
+      } else {
+        // In LTR: affix tabs first (leftmost), then normal tabs (rightmost)
+        return [...this.affixTabs, ...normalTabs].filter(Boolean);
+      }
     },
   },
   persist: [
