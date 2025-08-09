@@ -29,19 +29,89 @@
 
 /* Chrome Tabs - RTL Layout for existing DOM structure */
 [dir="rtl"] .tabs-chrome .tabs-chrome__item-main {
-  flex-direction: row-reverse;
+  flex-direction: row-reverse !important;
 }
 
 /* Fix icon margin for RTL in Chrome tabs */
 [dir="rtl"] .tabs-chrome .tabs-chrome__item-main .mr-1 {
-  margin-right: 0;
-  margin-left: 0.25rem;
+  margin-right: 0 !important;
+  margin-left: 0.25rem !important;
+}
+
+/* Fix any flex-center divs within tabs for RTL */
+[dir="rtl"] .tabs-chrome .flex-center {
+  flex-direction: row-reverse !important;
+}
+
+[dir="rtl"] .tabs-chrome .flex-center .mr-1 {
+  margin-right: 0 !important;
+  margin-left: 0.25rem !important;
+}
+
+/* General RTL support for iconify icons in tabs */
+[dir="rtl"] .tabs-chrome .iconify {
+  margin-right: 0 !important;
+  margin-left: 0.25rem !important;
+}
+
+/* Target the specific tab content structure */
+[dir="rtl"] .tabs-chrome__item .tabs-chrome__item-main {
+  flex-direction: row-reverse !important;
+}
+
+/* Target any flex container within tabs for RTL */
+[dir="rtl"] .tabs-chrome__item [class*="flex"] {
+  flex-direction: row-reverse !important;
+}
+
+/* Fix iconify icons with size-4 class */
+[dir="rtl"] .tabs-chrome .iconify.size-4 {
+  margin-right: 0 !important;
+  margin-left: 0.25rem !important;
+}
+
+/* === SPECIFIC DOM STRUCTURE FIXES === */
+
+/* Target the exact structure from your HTML */
+[dir="rtl"] .tabs-chrome__item[data-tab-item="true"] .tabs-chrome__item-main {
+  flex-direction: row-reverse !important;
+}
+
+/* Fix the absolute positioned extra buttons */
+[dir="rtl"] .tabs-chrome__extra.absolute.right-\[var\(--gap\)\] {
+  right: auto !important;
+  left: var(--gap) !important;
+}
+
+/* Target data-v attributes specifically */
+[dir="rtl"] [data-v-c5fe917d] .tabs-chrome__item-main {
+  flex-direction: row-reverse !important;
+}
+
+/* Override any inline flex styles */
+[dir="rtl"] .tabs-chrome .tabs-chrome__item-main[class*="flex"] {
+  flex-direction: row-reverse !important;
+}
+
+/* Ensure text comes before icons */
+[dir="rtl"] .tabs-chrome__item-main > span:last-child {
+  order: -1;
+}
+
+[dir="rtl"] .tabs-chrome__item-main > .iconify:first-child {
+  order: 1;
 }
 
 /* Fix close/pin button positioning for RTL */
 [dir="rtl"] .tabs-chrome .tabs-chrome__extra {
-  right: auto;
-  left: var(--gap);
+  right: auto !important;
+  left: var(--gap) !important;
+}
+
+/* Override Tailwind right-[var(--gap)] class for RTL */
+[dir="rtl"] .tabs-chrome .right-\[var\(--gap\)\] {
+  right: auto !important;
+  left: var(--gap) !important;
 }
 
 /* Chrome tabs item negative margin adjustment for RTL */
@@ -101,4 +171,35 @@
 [dir="rtl"] .vben-tabs-view .border-l {
   border-left: none;
   border-right: 1px solid;
+}
+
+/* === TABBAR TOOLS RTL === */
+
+/* Tabbar tools container RTL */
+[dir="rtl"] .vben-tabs-view + .flex-center {
+  flex-direction: row-reverse;
+}
+
+/* Fix margins in tabbar tools */
+[dir="rtl"] .vben-tabs-view + .flex-center .mr-1,
+[dir="rtl"] .vben-tabs-view + .flex-center .mr-2,
+[dir="rtl"] .vben-tabs-view + .flex-center .mr-3,
+[dir="rtl"] .vben-tabs-view + .flex-center .mr-4 {
+  margin-right: 0;
+}
+
+[dir="rtl"] .vben-tabs-view + .flex-center .mr-1 {
+  margin-left: 0.25rem;
+}
+
+[dir="rtl"] .vben-tabs-view + .flex-center .mr-2 {
+  margin-left: 0.5rem;
+}
+
+[dir="rtl"] .vben-tabs-view + .flex-center .mr-3 {
+  margin-left: 0.75rem;
+}
+
+[dir="rtl"] .vben-tabs-view + .flex-center .mr-4 {
+  margin-left: 1rem;
 }

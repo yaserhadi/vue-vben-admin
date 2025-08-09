@@ -1,0 +1,124 @@
+/* RTL Support for Layout UI - Global Framework */
+
+/* === GLOBAL RTL LAYOUT PATTERNS === */
+
+/* General flex-center RTL support */
+[dir="rtl"] .flex-center {
+  flex-direction: row-reverse;
+}
+
+/* Icon spacing fixes for RTL */
+[dir="rtl"] .flex-center .mr-1,
+[dir="rtl"] .flex-center .mr-2,
+[dir="rtl"] .flex-center .mr-3,
+[dir="rtl"] .flex-center .mr-4 {
+  margin-right: 0;
+}
+
+[dir="rtl"] .flex-center .mr-1 {
+  margin-left: 0.25rem;
+}
+
+[dir="rtl"] .flex-center .mr-2 {
+  margin-left: 0.5rem;
+}
+
+[dir="rtl"] .flex-center .mr-3 {
+  margin-left: 0.75rem;
+}
+
+[dir="rtl"] .flex-center .mr-4 {
+  margin-left: 1rem;
+}
+
+/* Iconify icons RTL support */
+[dir="rtl"] .iconify.mr-1,
+[dir="rtl"] .iconify.mr-2,
+[dir="rtl"] .iconify.mr-3,
+[dir="rtl"] .iconify.mr-4 {
+  margin-right: 0;
+}
+
+[dir="rtl"] .iconify.mr-1 {
+  margin-left: 0.25rem;
+}
+
+[dir="rtl"] .iconify.mr-2 {
+  margin-left: 0.5rem;
+}
+
+[dir="rtl"] .iconify.mr-3 {
+  margin-left: 0.75rem;
+}
+
+[dir="rtl"] .iconify.mr-4 {
+  margin-left: 1rem;
+}
+
+/* Size-4 icons RTL support */
+[dir="rtl"] .size-4.mr-1,
+[dir="rtl"] .size-4.mr-2,
+[dir="rtl"] .size-4.mr-3,
+[dir="rtl"] .size-4.mr-4 {
+  margin-right: 0;
+}
+
+[dir="rtl"] .size-4.mr-1 {
+  margin-left: 0.25rem;
+}
+
+[dir="rtl"] .size-4.mr-2 {
+  margin-left: 0.5rem;
+}
+
+[dir="rtl"] .size-4.mr-3 {
+  margin-left: 0.75rem;
+}
+
+[dir="rtl"] .size-4.mr-4 {
+  margin-left: 1rem;
+}
+
+/* === LAYOUT HEADER RTL === */
+
+/* Header flex items RTL */
+[dir="rtl"] .layout-header .flex {
+  flex-direction: row-reverse;
+}
+
+/* Header buttons and controls RTL */
+[dir="rtl"] .layout-header .mr-1,
+[dir="rtl"] .layout-header .mr-2,
+[dir="rtl"] .layout-header .mr-3,
+[dir="rtl"] .layout-header .mr-4 {
+  margin-right: 0;
+}
+
+[dir="rtl"] .layout-header .mr-1 {
+  margin-left: 0.25rem;
+}
+
+[dir="rtl"] .layout-header .mr-2 {
+  margin-left: 0.5rem;
+}
+
+[dir="rtl"] .layout-header .mr-3 {
+  margin-left: 0.75rem;
+}
+
+[dir="rtl"] .layout-header .mr-4 {
+  margin-left: 1rem;
+}
+
+/* === BREADCRUMB RTL === */
+
+/* Breadcrumb container RTL */
+[dir="rtl"] .breadcrumb,
+[dir="rtl"] [class*="breadcrumb"] {
+  flex-direction: row-reverse;
+}
+
+/* Breadcrumb items RTL */
+[dir="rtl"] .breadcrumb .flex-center {
+  flex-direction: row-reverse;
+}
