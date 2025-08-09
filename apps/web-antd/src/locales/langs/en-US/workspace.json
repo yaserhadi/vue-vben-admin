@@ -1,0 +1,121 @@
+{
+  "header": {
+    "greeting": "Good morning, {name}, start your day's work!",
+    "weather": "Sunny today, 20℃ - 32℃!"
+  },
+  "sections": {
+    "projects": "Projects",
+    "latestNews": "Latest News",
+    "quickNav": "Quick Navigation", 
+    "todo": "Todo Items",
+    "visitSource": "Visit Source"
+  },
+  "projects": {
+    "github": {
+      "content": "Don't wait for opportunities, create them.",
+      "group": "Open Source Team"
+    },
+    "vue": {
+      "content": "The present you determines the future you.",
+      "group": "Algorithm Team"
+    },
+    "html5": {
+      "content": "Nothing is more important than effort.",
+      "group": "Work Slacking"
+    },
+    "angular": {
+      "content": "Passion and desire can overcome all difficulties.",
+      "group": "UI"
+    },
+    "react": {
+      "content": "A healthy body is the cornerstone of achieving goals.",
+      "group": "Tech Experts"
+    },
+    "js": {
+      "content": "The road is walked out, not imagined.",
+      "group": "Architecture Team"
+    }
+  },
+  "quickNav": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "components": "Components",
+    "systemManagement": "System Management",
+    "permissionManagement": "Permission Management",
+    "charts": "Charts"
+  },
+  "todo": {
+    "reviewCode": {
+      "title": "Review Frontend Code Commits",
+      "content": "Review recent frontend code commits to the Git repository to ensure code quality and standards."
+    },
+    "optimizePerformance": {
+      "title": "System Performance Optimization",
+      "content": "Check and optimize system performance, reduce CPU usage."
+    },
+    "securityCheck": {
+      "title": "Security Check",
+      "content": "Perform system security check to ensure there are no security vulnerabilities or unauthorized access."
+    },
+    "updateDependencies": {
+      "title": "Update Project Dependencies",
+      "content": "Update all npm dependency packages in the project to ensure using the latest versions."
+    },
+    "fixUIIssues": {
+      "title": "Fix UI Display Issues",
+      "content": "Fix page UI display issues reported by users, ensure consistent display across different browsers."
+    }
+  },
+  "trends": {
+    "timeAgo": {
+      "justNow": "Just now",
+      "oneHourAgo": "1 hour ago", 
+      "oneDayAgo": "1 day ago",
+      "twoDaysAgo": "2 days ago",
+      "threeDaysAgo": "3 days ago",
+      "oneWeekAgo": "1 week ago"
+    },
+    "actions": {
+      "createdProject": "created project",
+      "followed": "followed",
+      "published": "published",
+      "publishedArticle": "published article",
+      "repliedToQuestion": "replied to {user}'s question",
+      "closedIssue": "closed issue",
+      "pushedCode": "pushed code to",
+      "in": "in"
+    },
+    "content": {
+      "personalUpdate": "personal update",
+      "vitePluginArticle": "How to Write a Vite Plugin",
+      "projectOptimization": "How to optimize projects?",
+      "runProject": "How to run the project",
+      "adminVbenArticle": "How to Write and Use Admin Vben"
+    },
+    "users": {
+      "william": "William",
+      "evan": "Evan", 
+      "chris": "Chris",
+      "vben": "Vben",
+      "pete": "Pete",
+      "jack": "Jack"
+    }
+  },
+  "notifications": {
+    "weeklyReport": "Received 14 new weekly reports",
+    "userReply": "Zhu Pianyou replied to you",
+    "userComment": "Qu Lili commented on you", 
+    "todoReminder": "Todo Reminder",
+    "timeAgo": {
+      "justNow": "Just now",
+      "hoursAgo": "{hours} hours ago",
+      "dayAgo": "1 day ago"
+    },
+    "description": "Description information description information description information"
+  },
+  "statistics": {
+    "todo": "Todo",
+    "projects": "Projects", 
+    "team": "Team"
+  }
+}

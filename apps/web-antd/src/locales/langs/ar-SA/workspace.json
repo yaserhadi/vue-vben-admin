@@ -1,0 +1,121 @@
+{
+  "header": {
+    "greeting": "صباح الخير، {name}، ابدأ عمل يومك!",
+    "weather": "مشمس اليوم، 20℃ - 32℃!"
+  },
+  "sections": {
+    "projects": "المشاريع",
+    "latestNews": "أحدث الأخبار",
+    "quickNav": "التنقل السريع", 
+    "todo": "المهام المطلوبة",
+    "visitSource": "مصدر الزيارة"
+  },
+  "projects": {
+    "github": {
+      "content": "لا تنتظر الفرص، بل اصنعها.",
+      "group": "فريق المصدر المفتوح"
+    },
+    "vue": {
+      "content": "أنت الحاضر تحدد أنت المستقبل.",
+      "group": "فريق الخوارزميات"
+    },
+    "html5": {
+      "content": "لا شيء أهم من الجهد.",
+      "group": "التسكع في العمل"
+    },
+    "angular": {
+      "content": "الشغف والرغبة يمكن أن يتغلبا على جميع الصعوبات.",
+      "group": "واجهة المستخدم"
+    },
+    "react": {
+      "content": "الجسم السليم هو حجر الأساس لتحقيق الأهداف.",
+      "group": "خبراء التكنولوجيا"
+    },
+    "js": {
+      "content": "الطريق يُسلك، وليس يُتخيل.",
+      "group": "فريق الهندسة المعمارية"
+    }
+  },
+  "quickNav": {
+    "home": "الرئيسية",
+    "dashboard": "لوحة التحكم",
+    "components": "المكونات",
+    "systemManagement": "إدارة النظام",
+    "permissionManagement": "إدارة الصلاحيات",
+    "charts": "الرسوم البيانية"
+  },
+  "todo": {
+    "reviewCode": {
+      "title": "مراجعة التزامات الكود الأمامي",
+      "content": "مراجعة أحدث التزامات الكود الأمامي في مستودع Git لضمان جودة الكود والمعايير."
+    },
+    "optimizePerformance": {
+      "title": "تحسين أداء النظام",
+      "content": "فحص وتحسين أداء النظام، تقليل استخدام المعالج."
+    },
+    "securityCheck": {
+      "title": "فحص الأمان",
+      "content": "إجراء فحص أمان النظام للتأكد من عدم وجود ثغرات أمنية أو وصول غير مصرح به."
+    },
+    "updateDependencies": {
+      "title": "تحديث تبعيات المشروع",
+      "content": "تحديث جميع حزم تبعيات npm في المشروع لضمان استخدام أحدث الإصدارات."
+    },
+    "fixUIIssues": {
+      "title": "إصلاح مشاكل عرض واجهة المستخدم",
+      "content": "إصلاح مشاكل عرض واجهة المستخدم المبلغ عنها من المستخدمين، ضمان العرض المتسق عبر المتصفحات المختلفة."
+    }
+  },
+  "trends": {
+    "timeAgo": {
+      "justNow": "الآن",
+      "oneHourAgo": "منذ ساعة واحدة", 
+      "oneDayAgo": "منذ يوم واحد",
+      "twoDaysAgo": "منذ يومين",
+      "threeDaysAgo": "منذ 3 أيام",
+      "oneWeekAgo": "منذ أسبوع واحد"
+    },
+    "actions": {
+      "createdProject": "أنشأ مشروع",
+      "followed": "تابع",
+      "published": "نشر",
+      "publishedArticle": "نشر مقال",
+      "repliedToQuestion": "رد على سؤال {user}",
+      "closedIssue": "أغلق مشكلة",
+      "pushedCode": "دفع الكود إلى",
+      "in": "في"
+    },
+    "content": {
+      "personalUpdate": "التحديث الشخصي",
+      "vitePluginArticle": "كيفية كتابة إضافة Vite",
+      "projectOptimization": "كيفية تحسين المشاريع؟",
+      "runProject": "كيفية تشغيل المشروع",
+      "adminVbenArticle": "كيفية كتابة واستخدام Admin Vben"
+    },
+    "users": {
+      "william": "وليام",
+      "evan": "إيفان", 
+      "chris": "كريس",
+      "vben": "في بن",
+      "pete": "بيت",
+      "jack": "جاك"
+    }
+  },
+  "notifications": {
+    "weeklyReport": "تم استلام 14 تقرير أسبوعي جديد",
+    "userReply": "رد عليك تشو بيان يو",
+    "userComment": "علقت عليك تشو لي لي", 
+    "todoReminder": "تذكير المهام",
+    "timeAgo": {
+      "justNow": "الآن",
+      "hoursAgo": "منذ {hours} ساعات",
+      "dayAgo": "منذ يوم واحد"
+    },
+    "description": "معلومات الوصف معلومات الوصف معلومات الوصف"
+  },
+  "statistics": {
+    "todo": "المهام",
+    "projects": "المشاريع", 
+    "team": "الفريق"
+  }
+}

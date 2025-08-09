@@ -24,31 +24,31 @@ import LoginForm from '#/views/_core/authentication/login.vue';
 const notifications = ref<NotificationItem[]>([
   {
     avatar: 'https://avatar.vercel.sh/vercel.svg?text=VB',
-    date: '3小时前',
+    date: $t('workspace.notifications.timeAgo.hoursAgo', { hours: 3 }),
     isRead: true,
-    message: '描述信息描述信息描述信息',
-    title: '收到了 14 份新周报',
+    message: $t('workspace.notifications.description'),
+    title: $t('workspace.notifications.weeklyReport'),
   },
   {
     avatar: 'https://avatar.vercel.sh/1',
-    date: '刚刚',
+    date: $t('workspace.notifications.timeAgo.justNow'),
     isRead: false,
-    message: '描述信息描述信息描述信息',
-    title: '朱偏右 回复了你',
+    message: $t('workspace.notifications.description'),
+    title: $t('workspace.notifications.userReply'),
   },
   {
     avatar: 'https://avatar.vercel.sh/1',
     date: '2024-01-01',
     isRead: false,
-    message: '描述信息描述信息描述信息',
-    title: '曲丽丽 评论了你',
+    message: $t('workspace.notifications.description'),
+    title: $t('workspace.notifications.userComment'),
   },
   {
     avatar: 'https://avatar.vercel.sh/satori',
-    date: '1天前',
+    date: $t('workspace.notifications.timeAgo.dayAgo'),
     isRead: false,
-    message: '描述信息描述信息描述信息',
-    title: '代办提醒',
+    message: $t('workspace.notifications.description'),
+    title: $t('workspace.notifications.todoReminder'),
   },
 ]);
 

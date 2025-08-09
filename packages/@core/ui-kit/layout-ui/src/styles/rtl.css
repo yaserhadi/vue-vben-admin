@@ -4,7 +4,7 @@
 
 /* General flex-center RTL support */
 [dir="rtl"] .flex-center {
-  flex-direction: row-reverse;
+  flex-direction: row-reverse !important;
 }
 
 /* Icon spacing fixes for RTL */
@@ -121,4 +121,106 @@
 /* Breadcrumb items RTL */
 [dir="rtl"] .breadcrumb .flex-center {
   flex-direction: row-reverse;
+}
+
+/* === NAVIGATION LINKS RTL === */
+
+/* All navigation links with flex-center */
+[dir="rtl"] a .flex-center {
+  flex-direction: row-reverse !important;
+}
+
+/* Navigation links with hover transitions */
+[dir="rtl"] a.hover\:text-foreground .flex-center {
+  flex-direction: row-reverse !important;
+}
+
+/* Fix margins in navigation links */
+[dir="rtl"] a .flex-center .mr-1,
+[dir="rtl"] a .flex-center .mr-2,
+[dir="rtl"] a .flex-center .mr-3,
+[dir="rtl"] a .flex-center .mr-4 {
+  margin-right: 0 !important;
+}
+
+[dir="rtl"] a .flex-center .mr-1 {
+  margin-left: 0.25rem !important;
+}
+
+[dir="rtl"] a .flex-center .mr-2 {
+  margin-left: 0.5rem !important;
+}
+
+[dir="rtl"] a .flex-center .mr-3 {
+  margin-left: 0.75rem !important;
+}
+
+[dir="rtl"] a .flex-center .mr-4 {
+  margin-left: 1rem !important;
+}
+
+/* Fix iconify icons in navigation links */
+[dir="rtl"] a .flex-center .iconify {
+  margin-right: 0 !important;
+  margin-left: 0.25rem !important;
+}
+
+/* Fix size-4 icons in navigation links */
+[dir="rtl"] a .flex-center .size-4 {
+  margin-right: 0 !important;
+  margin-left: 0.25rem !important;
+}
+
+/* Header navigation specific */
+[dir="rtl"] .layout-header a .flex-center,
+[dir="rtl"] header a .flex-center {
+  flex-direction: row-reverse !important;
+}
+
+/* === AGGRESSIVE FLEX-CENTER RTL OVERRIDE === */
+
+/* Force ALL flex-center containers to be RTL */
+[dir="rtl"] .flex-center,
+[dir="rtl"] div.flex-center,
+[dir="rtl"] span.flex-center {
+  flex-direction: row-reverse !important;
+  display: flex !important;
+}
+
+/* Target all iconify icons in flex-center */
+[dir="rtl"] .flex-center svg.iconify,
+[dir="rtl"] .flex-center .iconify {
+  margin-right: 0 !important;
+  margin-left: 0.25rem !important;
+}
+
+/* Specific targeting for your exact HTML structure */
+[dir="rtl"] .flex-center svg.iconify.iconify--lucide.mr-1.size-4 {
+  margin-right: 0 !important;
+  margin-left: 0.25rem !important;
+}
+
+/* Remove all mr-* classes in RTL flex-center */
+[dir="rtl"] .flex-center .mr-1,
+[dir="rtl"] .flex-center .mr-2,
+[dir="rtl"] .flex-center .mr-3,
+[dir="rtl"] .flex-center .mr-4,
+[dir="rtl"] .flex-center .mr-5,
+[dir="rtl"] .flex-center .mr-6 {
+  margin-right: 0 !important;
+}
+
+/* Add left margins instead */
+[dir="rtl"] .flex-center .mr-1 { margin-left: 0.25rem !important; }
+[dir="rtl"] .flex-center .mr-2 { margin-left: 0.5rem !important; }
+[dir="rtl"] .flex-center .mr-3 { margin-left: 0.75rem !important; }
+[dir="rtl"] .flex-center .mr-4 { margin-left: 1rem !important; }
+[dir="rtl"] .flex-center .mr-5 { margin-left: 1.25rem !important; }
+[dir="rtl"] .flex-center .mr-6 { margin-left: 1.5rem !important; }
+
+/* Ensure flex-center works in all contexts */
+[dir="rtl"] a .flex-center,
+[dir="rtl"] button .flex-center,
+[dir="rtl"] div .flex-center {
+  flex-direction: row-reverse !important;
 }
