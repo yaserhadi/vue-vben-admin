@@ -1,0 +1,56 @@
+{
+  "overview": {
+    "userCount": "المستخدمون",
+    "totalUserCount": "إجمالي المستخدمين",
+    "visitCount": "الزيارات", 
+    "totalVisitCount": "إجمالي الزيارات",
+    "downloadCount": "التحميلات",
+    "totalDownloadCount": "إجمالي التحميلات",
+    "usageCount": "الاستخدام",
+    "totalUsageCount": "إجمالي الاستخدام"
+  },
+  "charts": {
+    "trafficTrends": "اتجاهات حركة المرور",
+    "monthlyVisits": "الزيارات الشهرية",
+    "visitCount": "عدد الزيارات",
+    "visitSource": "مصدر الزيارة",
+    "businessRatio": "نسبة الأعمال"
+  },
+  "time": {
+    "month": "شهر",
+    "january": "يناير",
+    "february": "فبراير", 
+    "march": "مارس",
+    "april": "أبريل",
+    "may": "مايو",
+    "june": "يونيو",
+    "july": "يوليو",
+    "august": "أغسطس",
+    "september": "سبتمبر",
+    "october": "أكتوبر",
+    "november": "نوفمبر",
+    "december": "ديسمبر"
+  },
+  "sources": {
+    "searchEngine": "محرك البحث",
+    "directAccess": "الوصول المباشر", 
+    "emailMarketing": "التسويق عبر البريد الإلكتروني",
+    "affiliateAds": "إعلانات الشراكة",
+    "website": "الموقع الإلكتروني",
+    "mobile": "الجوال",
+    "ipad": "آيباد",
+    "client": "العميل",
+    "thirdParty": "طرف ثالث",
+    "others": "أخرى"
+  },
+  "business": {
+    "outsourcing": "الاستعانة بمصادر خارجية",
+    "customization": "التخصيص",
+    "techSupport": "الدعم التقني", 
+    "remote": "عن بُعد"
+  },
+  "legend": {
+    "visits": "الزيارات",
+    "trends": "الاتجاهات"
+  }
+}

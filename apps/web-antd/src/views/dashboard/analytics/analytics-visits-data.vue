@@ -4,6 +4,7 @@ import type { EchartsUIType } from '@vben/plugins/echarts';
 import { onMounted, ref } from 'vue';
 
 import { EchartsUI, useEcharts } from '@vben/plugins/echarts';
+import { $t } from '@vben/locales';
 
 const chartRef = ref<EchartsUIType>();
 const { renderEcharts } = useEcharts(chartRef);
@@ -12,27 +13,27 @@ onMounted(() => {
   renderEcharts({
     legend: {
       bottom: 0,
-      data: ['访问', '趋势'],
+      data: [$t('analytics.legend.visits'), $t('analytics.legend.trends')],
     },
     radar: {
       indicator: [
         {
-          name: '网页',
+          name: $t('analytics.sources.website'),
         },
         {
-          name: '移动端',
+          name: $t('analytics.sources.mobile'),
         },
         {
-          name: 'Ipad',
+          name: $t('analytics.sources.ipad'),
         },
         {
-          name: '客户端',
+          name: $t('analytics.sources.client'),
         },
         {
-          name: '第三方',
+          name: $t('analytics.sources.thirdParty'),
         },
         {
-          name: '其它',
+          name: $t('analytics.sources.others'),
         },
       ],
       radius: '60%',
@@ -52,14 +53,14 @@ onMounted(() => {
             itemStyle: {
               color: '#b6a2de',
             },
-            name: '访问',
+            name: $t('analytics.legend.visits'),
             value: [90, 50, 86, 40, 50, 20],
           },
           {
             itemStyle: {
               color: '#5ab1ef',
             },
-            name: '趋势',
+            name: $t('analytics.legend.trends'),
             value: [70, 75, 70, 76, 20, 85],
           },
         ],

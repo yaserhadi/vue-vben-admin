@@ -4,6 +4,7 @@ import type { EchartsUIType } from '@vben/plugins/echarts';
 import { onMounted, ref } from 'vue';
 
 import { EchartsUI, useEcharts } from '@vben/plugins/echarts';
+import { $t } from '@vben/locales';
 
 const chartRef = ref<EchartsUIType>();
 const { renderEcharts } = useEcharts(chartRef);
@@ -20,14 +21,14 @@ onMounted(() => {
         center: ['50%', '50%'],
         color: ['#5ab1ef', '#b6a2de', '#67e0e3', '#2ec7c9'],
         data: [
-          { name: '外包', value: 500 },
-          { name: '定制', value: 310 },
-          { name: '技术支持', value: 274 },
-          { name: '远程', value: 400 },
+          { name: $t('analytics.business.outsourcing'), value: 500 },
+          { name: $t('analytics.business.customization'), value: 310 },
+          { name: $t('analytics.business.techSupport'), value: 274 },
+          { name: $t('analytics.business.remote'), value: 400 },
         ].sort((a, b) => {
           return a.value - b.value;
         }),
-        name: '商业占比',
+        name: $t('analytics.charts.businessRatio'),
         radius: '80%',
         roseType: 'radius',
         type: 'pie',

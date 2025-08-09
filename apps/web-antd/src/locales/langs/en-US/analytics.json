@@ -1,0 +1,56 @@
+{
+  "overview": {
+    "userCount": "Users",
+    "totalUserCount": "Total Users",
+    "visitCount": "Visits", 
+    "totalVisitCount": "Total Visits",
+    "downloadCount": "Downloads",
+    "totalDownloadCount": "Total Downloads",
+    "usageCount": "Usage",
+    "totalUsageCount": "Total Usage"
+  },
+  "charts": {
+    "trafficTrends": "Traffic Trends",
+    "monthlyVisits": "Monthly Visits",
+    "visitCount": "Visit Count",
+    "visitSource": "Visit Source",
+    "businessRatio": "Business Ratio"
+  },
+  "time": {
+    "month": "Month",
+    "january": "Jan",
+    "february": "Feb", 
+    "march": "Mar",
+    "april": "Apr",
+    "may": "May",
+    "june": "Jun",
+    "july": "Jul",
+    "august": "Aug",
+    "september": "Sep",
+    "october": "Oct",
+    "november": "Nov",
+    "december": "Dec"
+  },
+  "sources": {
+    "searchEngine": "Search Engine",
+    "directAccess": "Direct Access", 
+    "emailMarketing": "Email Marketing",
+    "affiliateAds": "Affiliate Ads",
+    "website": "Website",
+    "mobile": "Mobile",
+    "ipad": "iPad",
+    "client": "Client",
+    "thirdParty": "Third Party",
+    "others": "Others"
+  },
+  "business": {
+    "outsourcing": "Outsourcing",
+    "customization": "Customization",
+    "techSupport": "Tech Support", 
+    "remote": "Remote"
+  },
+  "legend": {
+    "visits": "Visits",
+    "trends": "Trends"
+  }
+}
