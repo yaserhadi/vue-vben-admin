@@ -287,7 +287,7 @@ const tabbarStyle = computed((): CSSProperties => {
   }
 
   return {
-    marginLeft: `${marginLeft}px`,
+    marginInlineStart: `${marginLeft}px`,
     width,
   };
 });
@@ -318,7 +318,7 @@ const headerWrapperStyle = computed((): CSSProperties => {
   const fixed = headerFixed.value;
   return {
     height: isFullContent.value ? '0' : `${headerWrapperHeight.value}px`,
-    left: isMixedNav.value ? 0 : mainStyle.value.sidebarAndExtraWidth,
+    insetInlineStart: isMixedNav.value ? 0 : mainStyle.value.sidebarAndExtraWidth,
     position: fixed ? 'fixed' : 'static',
     top:
       headerIsHidden.value || isFullContent.value
@@ -609,7 +609,7 @@ const idMainContent = ELEMENT_ID_MAIN_CONTENT;
     <div
       v-if="maskVisible"
       :style="maskStyle"
-      class="bg-overlay fixed left-0 top-0 h-full w-full transition-[background-color] duration-200"
+      class="bg-overlay fixed top-0 h-full w-full transition-[background-color] duration-200"
       @click="handleClickMask"
     ></div>
   </div>

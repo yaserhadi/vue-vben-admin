@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { CSSProperties } from 'vue';
 
-import { computed, shallowRef, useSlots, watchEffect } from 'vue';
+import { computed, shallowRef, useSlots, watchEffect, ref, onMounted, onBeforeUnmount } from 'vue';
 
 import { VbenScrollbar } from '@vben-core/shadcn-ui';
 
@@ -118,12 +118,34 @@ const asideRef = shallowRef<HTMLDivElement | null>();
 
 const hiddenSideStyle = computed((): CSSProperties => calcMenuWidthStyle(true));
 
+// Track RTL from document <html dir>
+const isRtl = ref(false);
+let dirObserver: MutationObserver | null = null;
+
+onMounted(() => {
+  const htmlEl = document?.documentElement;
+  isRtl.value = htmlEl?.getAttribute('dir') === 'rtl';
+  if (htmlEl) {
+    dirObserver = new MutationObserver(() => {
+      isRtl.value = htmlEl.getAttribute('dir') === 'rtl';
+    });
+    dirObserver.observe(htmlEl, { attributes: true, attributeFilter: ['dir'] });
+  }
+});
+
+onBeforeUnmount(() => {
+  dirObserver?.disconnect();
+  dirObserver = null;
+});
+
 const style = computed((): CSSProperties => {
   const { isSidebarMixed, marginTop, paddingTop, zIndex } = props;
 
   return {
     '--scroll-shadow': 'var(--sidebar)',
     ...calcMenuWidthStyle(false),
+    // logical positioning
+    insetInlineStart: '0',
     height: `calc(100% - ${marginTop}px)`,
     marginTop: `${marginTop}px`,
     paddingTop: `${paddingTop}px`,
@@ -136,7 +158,8 @@ const extraStyle = computed((): CSSProperties => {
   const { extraWidth, show, width, zIndex } = props;
 
   return {
-    left: `${width}px`,
+    // logical positioning
+    insetInlineStart: `${width}px`,
     width: extraVisible.value && show ? `${extraWidth}px` : 0,
     zIndex,
   };
@@ -212,7 +235,8 @@ function calcMenuWidthStyle(isHiddenDom: boolean): CSSProperties {
   return {
     ...(widthValue === '0px' ? { overflow: 'hidden' } : {}),
     flex: `0 0 ${widthValue}`,
-    marginLeft: show ? 0 : `-${widthValue}`,
+    // logical margin
+    marginInlineStart: show ? 0 : `-${widthValue}`,
     maxWidth: widthValue,
     minWidth: widthValue,
     width: widthValue,
@@ -264,11 +288,12 @@ function handleMouseleave() {
       theme,
       {
         'bg-sidebar-deep': isSidebarMixed,
-        'bg-sidebar border-border border-r': !isSidebarMixed,
+        'bg-sidebar border-border border-r': !isSidebarMixed && !isRtl,
+        'bg-sidebar border-border border-l': !isSidebarMixed && isRtl,
       },
     ]"
     :style="style"
-    class="fixed left-0 top-0 h-full transition-all duration-150"
+    class="fixed top-0 h-full transition-all duration-150"
     @mouseenter="handleMouseenter"
     @mouseleave="handleMouseleave"
   >
@@ -292,10 +317,11 @@ function handleMouseleave() {
       v-if="isSidebarMixed"
       ref="asideRef"
       :class="{
-        'border-l': extraVisible,
+        'border-l': extraVisible && !isRtl,
+        'border-r': extraVisible && isRtl,
       }"
       :style="extraStyle"
-      class="border-border bg-sidebar fixed top-0 h-full overflow-hidden border-r transition-all duration-200"
+      class="border-border bg-sidebar fixed top-0 h-full overflow-hidden transition-all duration-200"
     >
       <SidebarCollapseButton
         v-if="isSidebarMixed && expandOnHover"
@@ -306,7 +332,7 @@ function handleMouseleave() {
         v-if="!extraCollapse"
         v-model:expand-on-hover="expandOnHover"
       />
-      <div v-if="!extraCollapse" :style="extraTitleStyle" class="pl-2">
+      <div v-if="!extraCollapse" :style="extraTitleStyle">
         <slot name="extra-title"></slot>
       </div>
       <VbenScrollbar

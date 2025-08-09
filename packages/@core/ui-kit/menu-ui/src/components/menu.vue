@@ -591,18 +591,27 @@ $namespace: vben;
     .#{$namespace}-menu-item {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       height: var(--menu-item-height);
-      padding-right: calc(var(--menu-item-padding-x) + 6px);
+      padding-inline: 14px calc(var(--menu-item-padding-x) + 6px);
       margin: 0;
-      margin-right: 2px;
+      margin-inline-end: 2px;
       // border-bottom: 2px solid transparent;
       border-radius: var(--menu-item-radius);
+      
+      .#{$namespace}-menu__icon {
+        margin-inline-end: 8px;
+      }
+      .#{$namespace}-menu-item__content {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
     }
 
     & > .#{$namespace}-sub-menu {
       height: var(--menu-item-height);
-      margin-right: 2px;
+      margin-inline-end: 2px;
 
       &:focus,
       &:hover {
@@ -611,9 +620,10 @@ $namespace: vben;
 
       & .#{$namespace}-sub-menu-content {
         height: 100%;
-        padding-right: 40px;
+        padding-inline: 0 40px;
         // border-bottom: 2px solid transparent;
         border-radius: var(--menu-item-radius);
+        gap: 8px;
       }
     }
 
@@ -716,7 +726,7 @@ $namespace: vben;
     flex-shrink: 0;
     width: var(--menu-item-icon-size);
     height: var(--menu-item-icon-size);
-    margin-right: 8px;
+    margin-inline-end: 8px;
     vertical-align: middle;
     text-align: center;
   }
@@ -777,14 +787,14 @@ $namespace: vben;
   .#{$namespace}-menu-tooltip__trigger {
     position: absolute;
     top: 0;
-    left: 0;
+    inset-inline-start: 0;
     box-sizing: border-box;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
-    padding: 0 var(--menu-item-padding-x);
+    padding-inline: 0 var(--menu-item-padding-x);
     font-size: var(--menu-font-size);
     line-height: var(--menu-item-height);
   }
@@ -818,10 +828,10 @@ $namespace: vben;
   &__icon-arrow {
     position: absolute;
     top: 50%;
-    right: 10px;
+    inset-inline-end: 10px;
     width: inherit;
     margin-top: -8px;
-    margin-right: 0;
+    margin-inline-end: 0;
     // font-size: 16px;
     font-weight: normal;
     opacity: 1;
@@ -854,7 +864,7 @@ $namespace: vben;
   }
 
   &.is-more {
-    padding-right: 12px !important;
+    padding-inline-end: 12px !important;
   }
 
   // &:not(.is-active):hover {
