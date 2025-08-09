@@ -84,12 +84,12 @@ const iconArrowStyle = computed(() => {
 
     <VbenIcon
       v-if="!isMenuMore"
-      :class="nsMenu.e('icon')"
+      :class="[nsMenu.e('icon'), 'vben-menu-item__icon']"
       :icon="icon"
       fallback
     />
 
-    <div v-if="!hiddenTitle" :class="[e('title')]">
+    <div v-if="!hiddenTitle" :class="[e('title'), 'vben-menu-item__label']">
       <slot name="title"></slot>
     </div>
 
@@ -97,7 +97,7 @@ const iconArrowStyle = computed(() => {
       :is="iconComp"
       v-if="!isMenuMore"
       v-show="showArrowIcon"
-      :class="[e('icon-arrow')]"
+      :class="[e('icon-arrow'), 'vben-menu-item__arrow']"
       :style="iconArrowStyle"
       class="size-4"
     />

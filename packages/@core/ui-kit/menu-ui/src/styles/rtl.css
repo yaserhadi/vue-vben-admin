@@ -1,0 +1,53 @@
+/* RTL Support for Menu UI */
+
+/* Vertical Menu Items - RTL Layout */
+[dir="rtl"] .vben-menu.is-vertical:not(.is-collapse) .vben-menu-item__content {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .vben-menu.is-vertical:not(.is-collapse) .vben-menu-item__icon {
+  margin-inline-end: 0;
+  margin-inline-start: 8px;
+}
+
+/* Sub Menu Content - RTL Layout */
+[dir="rtl"] .vben-menu.is-vertical:not(.is-collapse) .vben-sub-menu-content {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .vben-menu.is-vertical:not(.is-collapse) .vben-sub-menu-content .vben-menu-item__icon {
+  margin-inline-end: 0;
+  margin-inline-start: 8px;
+}
+
+[dir="rtl"] .vben-menu.is-vertical:not(.is-collapse) .vben-menu-item__arrow {
+  inset-inline-end: auto;
+  inset-inline-start: 10px;
+}
+
+/* Menu Badge positioning for RTL */
+[dir="rtl"] .vben-menu-item .menu-badge {
+  right: auto;
+  left: 8px;
+}
+
+/* Tooltip trigger RTL support */
+[dir="rtl"] .vben-menu-tooltip__trigger {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .vben-menu-tooltip__trigger .vben-menu-item__icon {
+  margin-inline-end: 0;
+  margin-inline-start: 8px;
+}
+
+/* Collapsed menu - center icons properly in RTL */
+[dir="rtl"] .vben-menu.is-collapse .vben-menu-item__content,
+[dir="rtl"] .vben-menu.is-collapse .vben-sub-menu-content {
+  flex-direction: row;
+}
+
+[dir="rtl"] .vben-menu.is-collapse .vben-menu-item__icon {
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}

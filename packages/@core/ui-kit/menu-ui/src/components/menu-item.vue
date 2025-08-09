@@ -111,12 +111,14 @@ onBeforeUnmount(() => {
     <div v-show="!showTooltip" :class="[e('content')]">
       <MenuBadge
         v-if="rootMenu.props.mode !== 'horizontal'"
-        class="right-2"
+        class="menu-badge"
         v-bind="props"
       />
-      <VbenIcon :class="nsMenu.e('icon')" :icon="menuIcon" />
-      <slot></slot>
-      <slot name="title"></slot>
+      <VbenIcon :class="[nsMenu.e('icon'), 'vben-menu-item__icon']" :icon="menuIcon" />
+      <span :class="['vben-menu-item__label']">
+        <slot></slot>
+        <slot name="title"></slot>
+      </span>
     </div>
   </li>
 </template>
