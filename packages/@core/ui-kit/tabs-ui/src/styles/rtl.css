@@ -1,0 +1,104 @@
+/* RTL Support for Tabs UI - Comprehensive Framework */
+
+/* === TABS CONTAINER RTL === */
+
+/* Main Tabs Container - RTL Flow */
+[dir="rtl"] .tabs-chrome {
+  flex-direction: row-reverse;
+  padding-right: 0;
+  padding-left: 1.5rem;
+}
+
+[dir="rtl"] .vben-tabs-content {
+  flex-direction: row-reverse;
+  padding-right: 0;
+  padding-left: 1.5rem;
+}
+
+/* TabsView root container RTL */
+[dir="rtl"] .vben-tabs-view {
+  flex-direction: row-reverse;
+}
+
+/* Scroll area viewport RTL - Target the specific scroll area */
+[dir="rtl"] .vben-tabs-view [data-radix-scroll-area-viewport] {
+  direction: rtl;
+}
+
+/* === CHROME TABS RTL === */
+
+/* Chrome Tabs - RTL Layout for existing DOM structure */
+[dir="rtl"] .tabs-chrome .tabs-chrome__item-main {
+  flex-direction: row-reverse;
+}
+
+/* Fix icon margin for RTL in Chrome tabs */
+[dir="rtl"] .tabs-chrome .tabs-chrome__item-main .mr-1 {
+  margin-right: 0;
+  margin-left: 0.25rem;
+}
+
+/* Fix close/pin button positioning for RTL */
+[dir="rtl"] .tabs-chrome .tabs-chrome__extra {
+  right: auto;
+  left: var(--gap);
+}
+
+/* Chrome tabs item negative margin adjustment for RTL */
+[dir="rtl"] .tabs-chrome .tabs-chrome__item {
+  margin-right: 0;
+  margin-left: -0.75rem;
+}
+
+/* Chrome tabs divider positioning for RTL */
+[dir="rtl"] .tabs-chrome .tabs-chrome__divider {
+  left: auto;
+  right: var(--gap);
+}
+
+/* Chrome tabs background curves for RTL */
+[dir="rtl"] .tabs-chrome .tabs-chrome__background-before {
+  left: auto;
+  right: -1px;
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .tabs-chrome .tabs-chrome__background-after {
+  right: auto;
+  left: -1px;
+  transform: scaleX(-1);
+}
+
+/* === REGULAR TABS RTL === */
+
+/* Regular Tabs - RTL Layout */
+[dir="rtl"] .vben-tabs-content .tab-item .size-full {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .vben-tabs-content .tab-item .absolute.right-1\.5 {
+  right: auto;
+  left: 0.375rem;
+}
+
+[dir="rtl"] .vben-tabs-content .tab-item .mx-3 {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .vben-tabs-content .tab-item .mr-2 {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+/* === TABS SCROLL BUTTONS RTL === */
+
+/* Scroll buttons positioning for RTL */
+[dir="rtl"] .vben-tabs-view .border-r {
+  border-right: none;
+  border-left: 1px solid;
+}
+
+[dir="rtl"] .vben-tabs-view .border-l {
+  border-left: none;
+  border-right: 1px solid;
+}

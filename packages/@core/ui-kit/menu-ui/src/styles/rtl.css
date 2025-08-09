@@ -1,11 +1,13 @@
-/* RTL Support for Menu UI */
+/* RTL Support for Menu UI - Comprehensive Framework */
+
+/* === VERTICAL SIDEBAR MENU RTL === */
 
 /* Vertical Menu Items - RTL Layout */
 [dir="rtl"] .vben-menu.is-vertical:not(.is-collapse) .vben-menu-item__content {
   flex-direction: row-reverse;
 }
 
-[dir="rtl"] .vben-menu.is-vertical:not(.is-collapse) .vben-menu-item__icon {
+[dir="rtl"] .vben-menu.is-vertical:not(.is-collapse) .vben-menu__icon {
   margin-inline-end: 0;
   margin-inline-start: 8px;
 }
@@ -15,12 +17,12 @@
   flex-direction: row-reverse;
 }
 
-[dir="rtl"] .vben-menu.is-vertical:not(.is-collapse) .vben-sub-menu-content .vben-menu-item__icon {
+[dir="rtl"] .vben-menu.is-vertical:not(.is-collapse) .vben-sub-menu-content .vben-menu__icon {
   margin-inline-end: 0;
   margin-inline-start: 8px;
 }
 
-[dir="rtl"] .vben-menu.is-vertical:not(.is-collapse) .vben-menu-item__arrow {
+[dir="rtl"] .vben-menu.is-vertical:not(.is-collapse) .vben-sub-menu-content__icon-arrow {
   inset-inline-end: auto;
   inset-inline-start: 10px;
 }
@@ -36,7 +38,7 @@
   flex-direction: row-reverse;
 }
 
-[dir="rtl"] .vben-menu-tooltip__trigger .vben-menu-item__icon {
+[dir="rtl"] .vben-menu-tooltip__trigger .vben-menu__icon {
   margin-inline-end: 0;
   margin-inline-start: 8px;
 }
@@ -47,7 +49,28 @@
   flex-direction: row;
 }
 
-[dir="rtl"] .vben-menu.is-collapse .vben-menu-item__icon {
+[dir="rtl"] .vben-menu.is-collapse .vben-menu__icon {
   margin-inline-start: 0;
   margin-inline-end: 0;
+}
+
+/* === HORIZONTAL MENU RTL (for consistency) === */
+
+/* Horizontal menu items RTL */
+[dir="rtl"] .vben-menu.is-horizontal .vben-menu-item__content {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .vben-menu.is-horizontal .vben-menu__icon {
+  margin-inline-end: 0;
+  margin-inline-start: 8px;
+}
+
+[dir="rtl"] .vben-menu.is-horizontal .vben-sub-menu-content {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .vben-menu.is-horizontal .vben-sub-menu-content .vben-menu__icon {
+  margin-inline-end: 0;
+  margin-inline-start: 8px;
 }
