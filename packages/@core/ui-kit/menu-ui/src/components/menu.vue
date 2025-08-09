@@ -146,10 +146,10 @@ createSubMenuContext({
 });
 
 function calcMenuItemWidth(menuItem: HTMLElement) {
-  const computedStyle = getComputedStyle(menuItem);
-  const marginLeft = Number.parseInt(computedStyle.marginLeft, 10);
-  const marginRight = Number.parseInt(computedStyle.marginRight, 10);
-  return menuItem.offsetWidth + marginLeft + marginRight || 0;
+  const cs = getComputedStyle(menuItem);
+  const mis = parseInt((cs as any)['marginInlineStart'] || cs.getPropertyValue('margin-inline-start') || cs.marginLeft, 10) || 0;
+  const mie = parseInt((cs as any)['marginInlineEnd'] || cs.getPropertyValue('margin-inline-end') || cs.marginRight, 10) || 0;
+  return menuItem.offsetWidth + mis + mie;
 }
 
 function calcSliceIndex() {
@@ -166,9 +166,9 @@ function calcSliceIndex() {
   const moreItemWidth = 46;
   const computedMenuStyle = getComputedStyle(menu?.value);
 
-  const paddingLeft = Number.parseInt(computedMenuStyle.paddingLeft, 10);
-  const paddingRight = Number.parseInt(computedMenuStyle.paddingRight, 10);
-  const menuWidth = menu.value?.clientWidth - paddingLeft - paddingRight;
+  const pis = parseInt((computedMenuStyle as any)['paddingInlineStart'] || computedMenuStyle.getPropertyValue('padding-inline-start') || computedMenuStyle.paddingLeft, 10) || 0;
+  const pie = parseInt((computedMenuStyle as any)['paddingInlineEnd'] || computedMenuStyle.getPropertyValue('padding-inline-end') || computedMenuStyle.paddingRight, 10) || 0;
+  const menuWidth = menu.value?.clientWidth - pis - pie;
 
   let calcWidth = 0;
   let sliceIndex = 0;
@@ -544,7 +544,7 @@ $namespace: vben;
 .#{$namespace}-menu {
   position: relative;
   box-sizing: border-box;
-  padding-left: 0;
+  padding-inline-start: 0;
   margin: 0;
   list-style: none;
   background: hsl(var(--menu-background-color));
@@ -555,7 +555,7 @@ $namespace: vben;
       & .#{$namespace}-menu-item,
       & .#{$namespace}-sub-menu-content,
       & .#{$namespace}-menu-item-group__title {
-        padding-left: calc(
+        padding-inline-start: calc(
           var(--menu-item-indent) + var(--menu-level) * var(--menu-item-indent)
         );
         white-space: nowrap;
@@ -564,7 +564,7 @@ $namespace: vben;
       & > .#{$namespace}-sub-menu {
         & > .#{$namespace}-menu {
           & > .#{$namespace}-menu-item {
-            padding-left: calc(
+            padding-inline-start: calc(
               0px + var(--menu-item-indent) + var(--menu-level) *
                 var(--menu-item-indent)
             );
@@ -572,11 +572,11 @@ $namespace: vben;
         }
 
         & > .#{$namespace}-sub-menu-content {
-          padding-left: calc(var(--menu-item-indent) - 8px);
+          padding-inline-start: calc(var(--menu-item-indent) - 8px);
         }
       }
       & > .#{$namespace}-menu-item {
-        padding-left: calc(var(--menu-item-indent) - 8px);
+        padding-inline-start: calc(var(--menu-item-indent) - 8px);
       }
     }
   }
@@ -801,7 +801,7 @@ $namespace: vben;
 }
 
 .#{$namespace}-sub-menu {
-  padding-left: 0;
+  padding-inline-start: 0;
   margin: 0;
   list-style: none;
   background: var(--menu-submenu-background-color);
