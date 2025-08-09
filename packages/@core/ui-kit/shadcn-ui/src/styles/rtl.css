@@ -1,0 +1,54 @@
+/* RTL Support for Shadcn UI Components */
+
+/* === BREADCRUMB RTL === */
+
+/* Breadcrumb flex-center containers */
+[dir="rtl"] .flex-center {
+  flex-direction: row-reverse !important;
+}
+
+/* Fix VbenIcon margins in breadcrumbs */
+[dir="rtl"] .flex-center .mr-1 {
+  margin-right: 0 !important;
+  margin-left: 0.25rem !important;
+}
+
+[dir="rtl"] .flex-center .mr-2 {
+  margin-right: 0 !important;
+  margin-left: 0.5rem !important;
+}
+
+/* Target specific breadcrumb structure */
+[dir="rtl"] .vben-breadcrumb .flex-center {
+  flex-direction: row-reverse !important;
+}
+
+[dir="rtl"] .vben-breadcrumb .flex-center .mr-1.size-4,
+[dir="rtl"] .vben-breadcrumb .flex-center .mr-1.size-5 {
+  margin-right: 0 !important;
+  margin-left: 0.25rem !important;
+}
+
+/* Dropdown menu triggers */
+[dir="rtl"] .flex.items-center.gap-1 {
+  flex-direction: row-reverse !important;
+}
+
+/* === SEMANTIC BREADCRUMB CLASSES === */
+
+/* Use order properties for guaranteed RTL layout */
+[dir="rtl"] .vben-breadcrumb-icon {
+  order: 2 !important;
+  margin-right: 0 !important;
+  margin-left: 0.25rem !important;
+}
+
+[dir="rtl"] .vben-breadcrumb-label {
+  order: 1 !important;
+}
+
+/* Ensure flex-center containers support ordered children */
+[dir="rtl"] .flex-center {
+  display: flex !important;
+  flex-direction: row-reverse !important;
+}

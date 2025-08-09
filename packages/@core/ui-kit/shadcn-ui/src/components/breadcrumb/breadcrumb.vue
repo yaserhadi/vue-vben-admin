@@ -45,8 +45,8 @@ function handleClick(path?: string) {
             <div v-if="item.items?.length ?? 0 > 0">
               <DropdownMenu>
                 <DropdownMenuTrigger class="flex items-center gap-1">
-                  <VbenIcon v-if="showIcon" :icon="item.icon" class="size-5" />
-                  {{ item.title }}
+                  <VbenIcon v-if="showIcon" :icon="item.icon" class="size-5 vben-breadcrumb-icon" />
+                  <span class="vben-breadcrumb-label">{{ item.title }}</span>
                   <ChevronDown class="size-4" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="start">
@@ -71,9 +71,9 @@ function handleClick(path?: string) {
                   v-if="showIcon"
                   :class="{ 'size-5': item.isHome }"
                   :icon="item.icon"
-                  class="mr-1 size-4"
+                  class="mr-1 size-4 vben-breadcrumb-icon"
                 />
-                {{ item.title }}
+                <span class="vben-breadcrumb-label">{{ item.title }}</span>
               </div>
             </BreadcrumbLink>
             <BreadcrumbPage v-else>
@@ -82,9 +82,9 @@ function handleClick(path?: string) {
                   v-if="showIcon"
                   :class="{ 'size-5': item.isHome }"
                   :icon="item.icon"
-                  class="mr-1 size-4"
+                  class="mr-1 size-4 vben-breadcrumb-icon"
                 />
-                {{ item.title }}
+                <span class="vben-breadcrumb-label">{{ item.title }}</span>
               </div>
             </BreadcrumbPage>
             <BreadcrumbSeparator
