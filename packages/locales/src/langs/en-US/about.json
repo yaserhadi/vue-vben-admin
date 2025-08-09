@@ -1,6 +1,6 @@
 {
   "title": "About Project",
-  "description": "is a modern, out-of-the-box middle and backend solution that adopts the latest technology stack, including cutting-edge technologies such as Vue 3.0, Vite, TailwindCSS and TypeScript, with strict code specifications and rich configuration options, aiming to provide ready-to-use solutions and rich examples for the development of medium and large projects. At the same time, it is also an excellent example for learning and in-depth frontend technology.",
+  "description": " is a modern, out-of-the-box middle and backend solution that adopts the latest technology stack, including cutting-edge technologies such as Vue 3.0, Vite, TailwindCSS and TypeScript, with strict code specifications and rich configuration options, aiming to provide ready-to-use solutions and rich examples for the development of medium and large projects. At the same time, it is also an excellent example for learning and in-depth frontend technology.",
   "sections": {
     "basicInfo": "Basic Information",
     "prodDependencies": "Production Dependencies", 
@@ -20,4 +20,3 @@
     "clickToView": "Click to View"
   }
 }
-

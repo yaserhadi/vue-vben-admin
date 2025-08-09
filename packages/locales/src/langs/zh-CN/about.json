@@ -1,0 +1,22 @@
+{
+  "title": "关于项目",
+  "description": " 是一个现代化开箱即用的中后台解决方案，采用最新的技术栈，包括 Vue 3.0、Vite、TailwindCSS 和 TypeScript 等前沿技术，代码规范严谨，提供丰富的配置选项，旨在为中大型项目的开发提供现成的开箱即用解决方案及丰富的示例，同时，它也是学习和深入前端技术的一个极佳示例。",
+  "sections": {
+    "basicInfo": "基本信息",
+    "prodDependencies": "生产环境依赖", 
+    "devDependencies": "开发环境依赖"
+  },
+  "fields": {
+    "version": "版本号",
+    "license": "开源许可协议",
+    "buildTime": "最后构建时间",
+    "homepage": "主页",
+    "docUrl": "文档地址",
+    "previewUrl": "预览地址",
+    "github": "Github",
+    "author": "作者"
+  },
+  "actions": {
+    "clickToView": "点击查看"
+  }
+}
