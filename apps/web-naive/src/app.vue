@@ -4,7 +4,7 @@ import type { GlobalThemeOverrides } from 'naive-ui';
 import { computed } from 'vue';
 
 import { useNaiveDesignTokens } from '@vben/hooks';
-import { preferences } from '@vben/preferences';
+import { preferences, usePreferences } from '@vben/preferences';
 
 import {
   darkTheme,
@@ -21,15 +21,18 @@ import {
 defineOptions({ name: 'App' });
 
 const { commonTokens } = useNaiveDesignTokens();
+const { locale } = usePreferences();
 
-const tokenLocale = computed(() =>
-  preferences.app.locale === 'zh-CN' ? zhCN : enUS,
-);
+const tokenLocale = computed(() => (locale.value === 'zh-CN' ? zhCN : enUS));
 const tokenDateLocale = computed(() =>
-  preferences.app.locale === 'zh-CN' ? dateZhCN : dateEnUS,
+  locale.value === 'zh-CN' ? dateZhCN : dateEnUS,
 );
 const tokenTheme = computed(() =>
   preferences.theme.mode === 'dark' ? darkTheme : lightTheme,
+);
+
+const direction = computed(() =>
+  String(locale.value).startsWith('ar') ? 'rtl' : 'ltr',
 );
 
 const themeOverrides = computed((): GlobalThemeOverrides => {
@@ -45,6 +48,7 @@ const themeOverrides = computed((): GlobalThemeOverrides => {
     :locale="tokenLocale"
     :theme="tokenTheme"
     :theme-overrides="themeOverrides"
+    :dir="direction"
     class="h-full"
   >
     <NNotificationProvider>
