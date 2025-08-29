@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { AboutProps, DescriptionItem } from './about';
 
-import { h } from 'vue';
+import { computed, h } from 'vue';
 
 import {
   VBEN_DOC_URL,
@@ -20,11 +20,13 @@ defineOptions({
   name: 'AboutUI',
 });
 
-withDefaults(defineProps<Props>(), {
-  description: $t('about.description'),
+const props = withDefaults(defineProps<Props>(), {
   name: 'Vben Admin',
-  title: $t('about.title'),
 });
+
+// Use computed properties for reactive translations
+const title = computed(() => props.title || $t('about.title'));
+const description = computed(() => props.description || $t('about.description'));
 
 declare global {
   const __VBEN_ADMIN_METADATA__: {
@@ -116,7 +118,7 @@ const devDependenciesItems = Object.keys(devDependencies).map((key) => ({
     <template #description>
       <p class="text-foreground mt-3 text-sm leading-6">
         <a :href="VBEN_GITHUB_URL" class="vben-link" target="_blank">
-          {{ name }}
+          {{ props.name }}
         </a>
         {{ description }}
       </p>
