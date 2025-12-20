@@ -11,6 +11,10 @@
     "analytics": "Analytics",
     "workspace": "Workspace"
   },
+  "home": {
+    "title": "Home",
+    "index": "Index"
+  },
   "demos": {
     "antd": {
       "title": "Ant Design Vue Component Usage Demo",
